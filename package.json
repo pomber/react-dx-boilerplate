@@ -1,0 +1,22 @@
+{
+  "scripts": {
+    "postinstall": "run-p install:server install:web",
+    "install:server": "cd server && yarn install",
+    "install:web": "cd web && yarn install",
+
+    "dev": "run-p start:server dev:web",
+    "dev:web": "npm run dev --prefix web",
+
+    "start": "run-p start:server start:web",
+    "start:server": "npm run start --prefix server",
+    "start:web": "npm run start --prefix web",
+
+    "build": "run-p build:server build:web",
+    "build:server": "cd server && npm run build && cd ..",
+    "build:web": "cd web && npm run build && cd .."
+  },
+  "devDependencies": {
+    "npm-run-all": "^4.0.2",
+    "opn-cli": "^3.1.0"
+  }
+}
