@@ -19,7 +19,5 @@
     "@storybook/react": "^3.2.18",
     "react-storybook-addon-chapters": "^2.1.1"
   },
-  "proxy": {
-    "/api": "http://localhost:8000/"
-  }
+  "proxy": "http://localhost:8000/"
 }

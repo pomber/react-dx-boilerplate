@@ -6,6 +6,7 @@ module.exports = function expressMiddleware(router) {
 
   if (typeof proxyConfig === "string") {
     router.use("/", proxy(proxyConfig));
+    return;
   }
 
   for (let domain in proxyConfig) {
